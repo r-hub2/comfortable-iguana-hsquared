@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">hsquared</title>
+  <desc id="desc">R hex sticker: dark teal field, gold pedigree of two parents and two offspring, white h-squared symbol centred in the hex. No wordmark inside the mark. Transparent outside the hex.</desc>
+  <defs>
+    <linearGradient id="fill" x1="200" y1="80" x2="980" y2="1120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0c4550"/>
+      <stop offset="55%" stop-color="#07343d"/>
+      <stop offset="100%" stop-color="#041f26"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="44%" r="60%">
+      <stop offset="0%" stop-color="#2f9aa2" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#041f26" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="18" stdDeviation="14" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <!-- pointy-top hex (R sticker convention) -->
+    <path id="hex" d="M600 70 L1010 310 L1010 790 L600 1030 L190 790 L190 310 Z"/>
+  </defs>
+
+  <use href="#hex" fill="url(#fill)" filter="url(#shadow)"/>
+  <use href="#hex" fill="url(#glow)"/>
+  <use href="#hex" fill="none" stroke="#f7fbfb" stroke-width="34" stroke-linejoin="round"/>
+  <path d="M600 108 L970 330 L970 770 L600 992 L230 770 L230 330 Z" fill="none" stroke="#3fd0c9" stroke-width="5" stroke-linejoin="round" opacity="0.95"/>
+
+  <!-- pedigree: two parents, mating bar, drop, sibship bar, two offspring -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M376 334 H824" stroke="#f3d78a" stroke-width="16"/>
+    <path d="M600 334 V502" stroke="#f3d78a" stroke-width="16"/>
+    <path d="M376 502 H824" stroke="#f3d78a" stroke-width="16"/>
+    <path d="M376 334 H824" stroke="#fff6d0" stroke-width="4" opacity="0.55"/>
+    <path d="M600 334 V502" stroke="#fff6d0" stroke-width="4" opacity="0.55"/>
+    <path d="M376 502 H824" stroke="#fff6d0" stroke-width="4" opacity="0.55"/>
+
+    <circle cx="376" cy="334" r="58" fill="#e2bc4e" stroke="#fff8e6" stroke-width="9"/>
+    <circle cx="824" cy="334" r="58" fill="#c9923a" stroke="#fff8e6" stroke-width="9"/>
+    <circle cx="376" cy="502" r="58" fill="#5ec9c0" stroke="#e9fffc" stroke-width="9"/>
+    <circle cx="824" cy="502" r="58" fill="#8edfd7" stroke="#e9fffc" stroke-width="9"/>
+  </g>
+
+  <text x="588" y="830" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="800" font-size="312" fill="#ffffff" letter-spacing="-6">h<tspan font-size="172" dy="-142">2</tspan></text>
+</svg>

@@ -1,0 +1,13 @@
+case,id,value
+poisson_laplace,a1,0.45716144794536456
+poisson_laplace,a2,-1.1141019041126112
+poisson_laplace,a3,0.76808180273031645
+poisson_laplace,a4,-1.5959960523811898
+poisson_laplace,a5,0.75574092720364039
+poisson_laplace,a6,-0.88443214706538165
+binomial_vector_variational,a1,-0.3407706594107543
+binomial_vector_variational,a2,0.98361108120762597
+binomial_vector_variational,a3,4.2949483386358827
+binomial_vector_variational,a4,-0.7349670135747336
+binomial_vector_variational,a5,1.8693272000155194
+binomial_vector_variational,a6,-1.8499767515032008

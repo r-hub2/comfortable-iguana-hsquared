@@ -1,0 +1,8 @@
+key,value
+genetic_structure,diagonal
+n_genetic_params,2
+loglik,-122.2257404581254
+converged,true
+iterations,156
+genetic_variance_trait1,0.5827773388074746
+genetic_variance_trait2,0.2640024344622394

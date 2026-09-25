@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use hsquared (or the Julia twin HSquared.jl), please cite it as below."
+title: "hsquared: R interface for Julia-backed quantitative-genetic models"
+abstract: >-
+  R-facing twin of HSquared.jl for open, sparse, inheritance-aware quantitative
+  genetics (animal models, relationship matrices, REML/ML, breeding values, and
+  planned genomic / non-standard inheritance surfaces). Twin DOI pending (hub
+  D-23); cite both repositories together once the shared DOI is deposited.
+type: software
+authors:
+  - family-names: Nakagawa
+    given-names: Shinichi
+    orcid: "https://orcid.org/0000-0002-7765-5182"
+    email: itchyshin@gmail.com
+  - family-names: Yang
+    given-names: Yefeng
+    orcid: "https://orcid.org/0000-0002-8610-4016"
+  - family-names: Drobniak
+    given-names: Szymon
+    orcid: "https://orcid.org/0000-0001-8101-6247"
+license: MIT
+repository-code: "https://github.com/itchyshin/hsquared"
+url: "https://itchyshin.github.io/hsquared/"
+version: 0.9.0
+keywords:
+  - quantitative genetics
+  - animal model
+  - heritability
+  - REML
+  - pedigree
+  - R
+  - mixed models

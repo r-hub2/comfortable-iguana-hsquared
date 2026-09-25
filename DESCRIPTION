@@ -1,0 +1,61 @@
+Package: hsquared
+Title: R Interface for Julia-Backed Quantitative-Genetic Models
+Version: 0.9.0
+Authors@R: c(
+    person("Shinichi", "Nakagawa", , "itchyshin@gmail.com", role = c("aut", "cre", "cph"),
+           comment = c(ORCID = "0000-0002-7765-5182")),
+    person("Yefeng", "Yang", role = c("aut", "cph"),
+           comment = c(ORCID = "0000-0002-8610-4016")),
+    person("Szymon", "Drobniak", role = c("aut", "cph"),
+           comment = c(ORCID = "0000-0001-8101-6247"))
+    )
+Description: Provides the R-facing interface for an open quantitative-genetic
+    modelling system backed by the HSquared.jl Julia engine. Experimental
+    0.9.0 experimental release (not production): the version tracks covered
+    capability (public covered count is 7), not maturity; experimental label
+    retained. CRAN submission is separately gated on one frozen artifact. Version 0.1 fits the univariate Gaussian
+    animal model (y ~ fixed + animal(1 | id, pedigree = ped)) by restricted
+    maximum likelihood and returns heritability, variance components, breeding
+    values, and standard extractors. Default fitting requires a local Julia and
+    HSquared.jl; use hs_control(engine = "validate") to preview the model
+    contract without fitting. What you may report is listed on the package
+    article 'Can I fit and report this?', not in validation_status(), which is
+    a developer evidence table. Uncertainty intervals are experimental and not
+    coverage-calibrated. Genomic GREML is covered at validation scale only on
+    its explicit Julia target (`target = "genomic"`); the ordinary call remains
+    the pedigree animal-model route. Experimental 0.9.0 retained; public
+    covered count stays 7. Single-step, SNP-BLUP,
+    repeatability, and two-effect animal models fit through opt-in engine paths
+    (repeatability/two-effect covered where previously covered; SNP-BLUP
+    remains experimental; single-step remains opt-in partial; Julia
+    engine-covered is not R covered); multivariate cbind() animal models route
+    on the default call and are covered at validation scale (t = 2 unstructured;
+    k >= 3 and diagonal stay experimental); non-Gaussian
+    (poisson(log)/binomial(logit)) models fit through an opt-in experimental
+    conditional three-field engine path: logit observation-scale h2 is finite
+    for Bernoulli and common-trial Binomial data, while varying trial counts
+    return the explicit NaN sentinel because no scalar estimand is defined;
+    no coverage-calibrated or covered claim is made; factor-analytic models
+    remain planned.
+License: MIT + file LICENSE
+URL: https://itchyshin.github.io/hsquared/,
+        https://github.com/itchyshin/hsquared,
+        https://github.com/itchyshin/HSquared.jl
+BugReports: https://github.com/itchyshin/hsquared/issues
+Encoding: UTF-8
+Language: en-US
+Roxygen: list(markdown = TRUE)
+Imports: ggplot2, lifecycle, Matrix, stats
+Suggests: enhancer, JuliaCall, knitr, lme4, nadiv, pedigreemm,
+        rmarkdown, sommer, testthat (>= 3.0.0), withr
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.1.0
+NeedsCompilation: no
+Packaged: 2026-09-25 19:28:03 UTC; z3437171
+Author: Shinichi Nakagawa [aut, cre, cph] (ORCID:
+    <https://orcid.org/0000-0002-7765-5182>),
+  Yefeng Yang [aut, cph] (ORCID: <https://orcid.org/0000-0002-8610-4016>),
+  Szymon Drobniak [aut, cph] (ORCID:
+    <https://orcid.org/0000-0001-8101-6247>)
+Maintainer: Shinichi Nakagawa <itchyshin@gmail.com>

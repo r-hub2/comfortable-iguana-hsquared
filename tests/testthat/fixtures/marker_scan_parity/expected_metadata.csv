@@ -1,0 +1,7 @@
+field,value
+engine,HSquared.jl
+target,mixed_model_marker_scan
+n_markers,3
+sigma_a2,1.2
+sigma_e2,0.8
+vanraden_scale,1.4861111111111112

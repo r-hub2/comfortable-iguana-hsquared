@@ -1,0 +1,177 @@
+schema_version = 1
+lane = "hsquared"
+updated = "2026-09-01"
+julia_index_mirror = "HSquared.jl/test/fixtures/comparator_targets.toml"
+claim_boundary = "Machine-readable R-lane fixture index only. These entries do not add external comparator evidence or promote validation status."
+
+[[target]]
+id = "animal_model_fitted_target"
+issue = 46
+fixture = "animal_model_fitted_target"
+r_fixture_path = "tests/testthat/fixtures/animal_model_fitted_target"
+julia_fixture_path = "test/fixtures/animal_model_fitted_target"
+r_mirror = true
+capability_rows = ["V1-MME", "V1-MRODE-FIT", "V1-COMPARATORS"]
+estimator_target = "univariate Gaussian animal model with REML-estimated variance components"
+evidence_type = "julia_target_r_consumed"
+external_status = "R lane live bridge consumed the fixture; same-estimand fitted-output comparator remains open."
+required_comparator = "same-estimand REML fitted-output comparator or published fitted-output target with versions and tolerances"
+required_files = [
+    "README.md",
+    "pedigree.csv",
+    "phenotypes.csv",
+    "expected_variance_components.csv",
+    "expected_beta.csv",
+    "expected_ebv.csv",
+    "expected_reliability.csv",
+    "expected_metadata.csv",
+]
+boundary = "Serialized Julia fitted target plus R bridge verification; not a bundled external comparator and not a new covered-status claim."
+
+[[target]]
+id = "sire_model_fitted_target"
+issue = 16
+fixture = "sire_model_fitted_target"
+r_fixture_path = ""
+julia_fixture_path = "test/fixtures/sire_model_fitted_target"
+r_mirror = false
+capability_rows = ["V1-SIRE-FIT"]
+estimator_target = "sire model (record->sire incidence, sires-only Ainv) with REML-estimated sire variance"
+evidence_type = "julia_target"
+external_status = "Julia-native fitted sire-model target with a committed self-consistency test; the same-estimand REML sire-model confrontation (R-lane nadiv/pedigreemm fit of the SAME serialized data) is OPEN. The existing R-side published supplied-variance Mrode Example 3.2 anchor (tests/testthat/test-mrode-sire-anchor.R) is a supplied-variance anchor, not estimated-VC corroboration."
+required_comparator = "same-estimand REML sire-model comparator or published estimated-VC sire-model target with versions and tolerances"
+required_files = [
+    "README.md",
+    "pedigree.csv",
+    "phenotypes.csv",
+    "expected_variance_components.csv",
+    "expected_beta.csv",
+    "expected_ebv.csv",
+    "expected_reliability.csv",
+    "expected_metadata.csv",
+    "generate.jl",
+]
+boundary = "Serialized Julia fitted sire-model target plus a self-consistency pin only; the engine heritability() accessor is mislabelled for sire specs (the fixture stores the corrected h2 = 4 sigma_s2 / (sigma_s2 + sigma_e2)); no external comparator run, no parsed R sire-model formula, and no covered status. This is the ONE target with no R mirror, and that is now a DOCUMENTED Julia-only boundary rather than a silent gap: docs/dev-log/comparator-runs/2026-09-01-sire-julia-only-boundary.md. Documented is not discharged — the harness still reports gap and --strict still fails; whether to mirror the fixture or make the Julia-only boundary permanent is an open owner decision. Note that tests/testthat/test-mrode-sire-anchor.R is NOT this mirror: it is a supplied-variance published anchor, so it cannot corroborate a REML-estimated sire variance."
+
+[[target]]
+id = "phase4_multitrait_parity"
+issue = 49
+fixture = "phase4_multitrait_parity"
+r_fixture_path = "tests/testthat/fixtures/phase4_multitrait_parity"
+julia_fixture_path = "test/fixtures/phase4_multitrait_parity"
+r_mirror = true
+capability_rows = ["V4-MV", "V4-MV-REML"]
+estimator_target = "two-trait Gaussian animal model with full unstructured G0 and R0"
+evidence_type = "julia_target_external_one_leg"
+external_status = "R lane reproduced one same-estimand sommer comparator leg; second independent same-estimand comparator remains open."
+required_comparator = "BLUPF90, ASReml, DMU, WOMBAT, JWAS-equivalent REML, or another independent same-estimand comparator"
+required_files = [
+    "README.md",
+    "pedigree.csv",
+    "phenotypes.csv",
+    "expected_genetic_covariance.csv",
+    "expected_residual_covariance.csv",
+    "expected_beta.csv",
+    "expected_ebv.csv",
+    "expected_heritability.csv",
+    "expected_metadata.csv",
+]
+boundary = "One external sommer leg exists; no second independent same-estimand comparator and no covered V4-MV-REML promotion."
+
+[[target]]
+id = "genomic_gblup_snpblup_target"
+issue = 49
+fixture = "genomic_gblup_snpblup_target"
+r_fixture_path = "tests/testthat/fixtures/genomic_gblup_snpblup_target"
+julia_fixture_path = "test/fixtures/genomic_gblup_snpblup_target"
+r_mirror = true
+capability_rows = ["V2-GBLUP", "V2-SNPBLUP", "V2-GREML"]
+estimator_target = "supplied-variance VanRaden method-1 GBLUP and SNP-BLUP route agreement"
+evidence_type = "julia_target_r_consumed"
+external_status = "R lane mirrored and consumed the target in hsquared PR #84 (52507da) with a Julia-free recomputation of supplied-frequency VanRaden G, Ginv, GBLUP MME, and SNP-BLUP route agreement; no external genomic comparator has been run."
+required_comparator = "AGHmatrix, sommer, rrBLUP, BLUPF90, JWAS-equivalent, or another independent same-estimand genomic comparator"
+required_files = [
+    "README.md",
+    "phenotypes.csv",
+    "markers.csv",
+    "allele_frequencies.csv",
+    "expected_genomic_relationship.csv",
+    "expected_genomic_precision.csv",
+    "expected_beta.csv",
+    "expected_gebv.csv",
+    "expected_marker_effects.csv",
+    "expected_metadata.csv",
+    "generate.jl",
+]
+boundary = "Positive-definite supplied-frequency target plus R internal consumer check only; no external genomic comparator, sparse/APY scaling, or public R genomic model-spec activation."
+
+[[target]]
+id = "marker_scan_parity"
+issue = 45
+fixture = "marker_scan_parity"
+r_fixture_path = "tests/testthat/fixtures/marker_scan_parity"
+julia_fixture_path = "test/fixtures/marker_scan_parity"
+r_mirror = true
+capability_rows = ["V5-MARKER-MIXED", "V5-MARKER-LOCO", "V5-MARKER-THRESHOLD"]
+estimator_target = "post-fit supplied-variance mixed-model marker-scan result payload"
+evidence_type = "bridge_payload_fixture"
+external_status = "R lane mirrored the payload fixture and tested Julia-free normalizer parity; hsquared PR #83 (1c239ec) records local marker-scan comparator/threshold tooling availability blockers; threshold activation remains open."
+required_comparator = "external marker-scan calibration/comparator only for calibrated threshold or public significance claims"
+required_files = [
+    "README.md",
+    "pedigree.csv",
+    "phenotypes.csv",
+    "markers.csv",
+    "expected_marker_scan_payload.csv",
+    "expected_metadata.csv",
+]
+boundary = "Bridge payload shape only; no calibrated genome-wide threshold, map-annotated GWAS/QTL/eQTL workflow, or comparator evidence."
+
+[[target]]
+id = "structured_covariance_parity"
+issue = 42
+fixture = "structured_covariance_parity"
+r_fixture_path = "tests/testthat/fixtures/structured_covariance_parity"
+julia_fixture_path = "test/fixtures/structured_covariance_parity"
+r_mirror = true
+capability_rows = ["V4-FA", "V4-BRIDGE"]
+estimator_target = "diagonal structured multivariate covariance bridge target"
+evidence_type = "bridge_payload_fixture"
+external_status = "Diagonal structured payload is banked; lowrank and factor-analytic loading exposure remain blocked."
+required_comparator = "external structured-covariance comparator and a rotation/loading convention before lowrank or factor-analytic bridge claims"
+required_files = [
+    "README.md",
+    "pedigree.csv",
+    "phenotypes.csv",
+    "expected_genetic_covariance.csv",
+    "expected_residual_covariance.csv",
+    "expected_beta.csv",
+    "expected_ebv.csv",
+    "expected_heritability.csv",
+    "expected_metadata.csv",
+]
+boundary = "Rotation-free diagonal bridge target only; no lowrank/fa bridge exposure, loading interpretation, recovery promotion, or covered status."
+
+[[target]]
+id = "non_gaussian_parity"
+issue = 44
+fixture = "non_gaussian_parity"
+r_fixture_path = "tests/testthat/fixtures/non_gaussian_parity"
+julia_fixture_path = "test/fixtures/non_gaussian_parity"
+r_mirror = true
+capability_rows = ["V6-FIT", "V6-BINOMIAL", "V6-BERNOULLI"]
+estimator_target = "non-Gaussian NonGaussianFit bridge payload for Poisson Laplace and per-record Binomial variational fits"
+evidence_type = "bridge_payload_fixture"
+external_status = "Julia fixture consumed by hsquared PR #95 for R Julia-free result-normalizer tests; hsquared PR #96 records the existing opt-in R nongaussian bridge for Poisson/Binomial LA/VA fits; per-record varying-trial formula/bridge activation remains open."
+required_comparator = "GLLVM.jl, gllvmTMB, threshold/probit, or another accepted same-estimand comparator before any V6 covered move"
+required_files = [
+    "README.md",
+    "pedigree.csv",
+    "poisson_phenotypes.csv",
+    "binomial_phenotypes.csv",
+    "expected_payload_metadata.csv",
+    "expected_variance_components.csv",
+    "expected_fixed_effects.csv",
+    "expected_breeding_values.csv",
+]
+boundary = "Bridge payload and opt-in R normalizer/bridge status only; no per-record varying-trial R activation, no calibrated interval claim, no external comparator evidence, and no covered status."

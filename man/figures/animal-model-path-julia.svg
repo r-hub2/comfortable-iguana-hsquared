@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 248" role="img" aria-labelledby="title desc">
+  <title id="title">Default univariate animal-model path (Julia engine)</title>
+  <desc id="desc">Flowchart of the engine-side univariate animal model: pedigree and phenotype become a validated spec, AI-REML returns variance components, heritability, and breeding values. Genomic and multivariate paths are not shown.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0072B2"/>
+    </marker>
+  </defs>
+  <rect width="960" height="248" fill="#ffffff"/>
+  <text x="24" y="28" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0072B2">v0.1 univariate Gaussian REML (engine)</text>
+  <text x="936" y="28" text-anchor="end" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#64748b">not genomics / not multi-trait / not QTL</text>
+
+  <rect x="24" y="52" width="196" height="116" rx="4" fill="#f8fafc" stroke="#0f2533" stroke-width="1.25"/>
+  <text x="122" y="96" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#0f2533">Phenotype + pedigree</text>
+  <text x="122" y="118" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#475569">y, X, sparse Z</text>
+  <text x="122" y="136" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#475569">normalize_pedigree</text>
+
+  <line x1="220" y1="110" x2="268" y2="110" stroke="#0072B2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="276" y="52" width="220" height="116" rx="4" fill="#ffffff" stroke="#E69F00" stroke-width="2"/>
+  <text x="386" y="84" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#92400e">Julia spec</text>
+  <text x="386" y="110" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="12" fill="#0f2533">animal_model_spec(</text>
+  <text x="386" y="130" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="12" fill="#0f2533">y, X, Z, Ainv)</text>
+  <text x="386" y="150" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#475569">Ainv = pedigree_inverse(ped)</text>
+
+  <line x1="496" y1="110" x2="544" y2="110" stroke="#0072B2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="552" y="52" width="176" height="116" rx="4" fill="#f8fafc" stroke="#0f2533" stroke-width="1.25"/>
+  <text x="640" y="96" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#0f2533">fit_ai_reml</text>
+  <text x="640" y="118" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#475569">experimental engine</text>
+  <text x="640" y="136" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#475569">not a formula API</text>
+
+  <line x1="728" y1="110" x2="776" y2="110" stroke="#0072B2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="784" y="52" width="152" height="116" rx="4" fill="#0072B2" stroke="#0072B2" stroke-width="1.25"/>
+  <text x="860" y="92" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Returns</text>
+  <text x="860" y="114" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#ffffff">Va, Ve, h2</text>
+  <text x="860" y="134" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#ffffff">EBVs / BLUPs</text>
+
+  <text x="24" y="198" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#0f2533">Applied users type the R formula in hsquared. These pages document the engine underneath.</text>
+  <text x="24" y="220" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#64748b">Not in Julia General - install with Pkg.add(url=...). Live public_covered_count is validation_status(), not this figure. Not production sparse fitting.</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 320" role="img" aria-labelledby="title desc">
+  <title id="title">R to Julia twin bridge</title>
+  <desc id="desc">Two-column diagram of the hsquared R to HSquared.jl bridge. Formula language stays in R; sparse y, X, Z CSC, pedigree indices, and target metadata cross the bridge; solvers stay in Julia; result_payload returns variance components, heritability, and breeding values. Default engine equals fit for the v0.1 path; other targets are opt-in experimental.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0072B2"/>
+    </marker>
+    <pattern id="nnz" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#f1f5f9"/>
+      <rect x="1" y="1" width="3" height="3" fill="#0072B2" opacity="0.55"/>
+      <rect x="6" y="5" width="3" height="3" fill="#0072B2" opacity="0.35"/>
+    </pattern>
+  </defs>
+  <rect width="980" height="320" fill="#ffffff"/>
+
+  <text x="24" y="26" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0072B2">Twin bridge / payload contract</text>
+  <text x="956" y="26" text-anchor="end" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#64748b">not a green connected orb for every model</text>
+
+  <!-- R column -->
+  <rect x="24" y="44" width="250" height="220" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.25"/>
+  <text x="149" y="70" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#475569">R / lane-local</text>
+  <text x="149" y="96" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#64748b">formula language</text>
+  <rect x="44" y="110" width="210" height="52" rx="3" fill="#ffffff" stroke="#E69F00" stroke-width="1.5"/>
+  <text x="149" y="132" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="11" fill="#0f2533">hsquared(y ~ ...)</text>
+  <text x="149" y="150" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="10.5" fill="#0f2533">model_spec() / extractors</text>
+  <text x="149" y="188" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#64748b">stays in R</text>
+  <text x="149" y="208" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#94a3b8">summaries / S3 / pkgdown</text>
+  <text x="149" y="236" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#94a3b8">JuliaCall session glue</text>
+
+  <!-- Bridge pipe -->
+  <rect x="300" y="44" width="380" height="220" rx="4" fill="#ffffff" stroke="#0072B2" stroke-width="2"/>
+  <text x="490" y="70" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0072B2">crosses the bridge</text>
+  <text x="490" y="92" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#475569">payload fields (real names)</text>
+
+  <rect x="320" y="108" width="168" height="128" rx="3" fill="#eff6ff" stroke="#0072B2" stroke-width="1"/>
+  <text x="404" y="130" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="600" fill="#0f2533">request</text>
+  <text x="404" y="152" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="11" fill="#0f2533">y / X / Z (CSC)</text>
+  <text x="404" y="170" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="11" fill="#0f2533">pedigree indices</text>
+  <text x="404" y="188" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="11" fill="#0f2533">Ainv metadata</text>
+  <text x="404" y="206" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="11" fill="#0f2533">target / method</text>
+  <rect x="360" y="214" width="88" height="14" fill="url(#nnz)" stroke="#0072B2" stroke-width="0.75"/>
+
+  <line x1="498" y1="172" x2="522" y2="172" stroke="#0072B2" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="532" y="108" width="128" height="128" rx="3" fill="#eff6ff" stroke="#0072B2" stroke-width="1"/>
+  <text x="596" y="130" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="600" fill="#0f2533">result_payload</text>
+  <text x="596" y="154" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="10.5" fill="#0f2533">variance_components</text>
+  <text x="596" y="172" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="10.5" fill="#0f2533">heritability</text>
+  <text x="596" y="190" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="10.5" fill="#0f2533">breeding_values</text>
+  <text x="596" y="208" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="10.5" fill="#0f2533">fit_diagnostics</text>
+
+  <!-- Julia column -->
+  <rect x="706" y="44" width="250" height="220" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.25"/>
+  <text x="831" y="70" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#475569">Julia / lane-local</text>
+  <text x="831" y="96" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#64748b">solvers / sparse LA</text>
+  <rect x="726" y="110" width="210" height="52" rx="3" fill="#ffffff" stroke="#0f2533" stroke-width="1.25"/>
+  <text x="831" y="132" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="11" fill="#0f2533">AI-REML / MME</text>
+  <text x="831" y="150" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="10.5" fill="#0f2533">pedigree_inverse / fit_*</text>
+  <text x="831" y="188" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#64748b">stays in Julia</text>
+  <text x="831" y="208" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#94a3b8">HSquared.jl structs</text>
+  <text x="831" y="236" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#94a3b8">never cross as objects</text>
+
+  <text x="24" y="290" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#0f2533">Default path: engine = "fit" / v0.1 univariate Gaussian REML.</text>
+  <text x="24" y="310" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#64748b">Opt-in experimental: engine = "julia" + explicit target (genomic GREML, repeatability, SNP-BLUP, RR, ...). Multivariate cbind() routes on the default call but keeps the experimental label.</text>
+</svg>

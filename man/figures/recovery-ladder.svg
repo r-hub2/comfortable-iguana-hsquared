@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 560" role="img" aria-labelledby="title desc">
+  <title id="title">Validation ladder from planned to covered</title>
+  <desc id="desc">Three-rung validation ladder from planned to partial to covered. A side note marks internal self-agreement as insufficient for covered status. Explicit genomic GREML is covered at validation scale; interval rows remain separate. Live public_covered_count is taken from validation_status(), not this figure.</desc>
+  <rect width="640" height="560" fill="#ffffff"/>
+  <text x="24" y="32" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f2533">What "covered" means</text>
+  <text x="24" y="52" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#64748b">Status words from validation_status(). Fill and position both encode the rung, not colour alone.</text>
+
+  <rect x="24" y="76" width="380" height="112" rx="4" fill="#0072B2"/>
+  <circle cx="52" cy="132" r="9" fill="#ffffff"/>
+  <text x="76" y="108" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">COVERED</text>
+  <text x="76" y="130" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#ffffff">Known-truth recovery and/or an external</text>
+  <text x="76" y="148" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#ffffff">same-estimand comparator, at a declared gate.</text>
+  <text x="76" y="170" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#dbeafe">Example: v0.1 animal model - DGP + gryphon + sommer.</text>
+
+  <rect x="24" y="204" width="380" height="112" rx="4" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
+  <circle cx="52" cy="260" r="9" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+  <text x="76" y="236" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#334155">PARTIAL</text>
+  <text x="76" y="258" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#475569">The code runs (usually opt-in). Tests pin shape</text>
+  <text x="76" y="276" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#475569">and internal consistency. Not a reporting claim.</text>
+  <text x="76" y="298" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#64748b">Intervals and SNP-BLUP stay here; genomic GREML is covered opt-in.</text>
+
+  <rect x="24" y="332" width="380" height="112" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <circle cx="52" cy="388" r="9" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="76" y="364" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#64748b">PLANNED</text>
+  <text x="76" y="386" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#64748b">Named on the roadmap. The parser may reserve</text>
+  <text x="76" y="404" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#64748b">syntax, then error as not implemented.</text>
+  <text x="76" y="426" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#94a3b8">GLLVM, unusual inheritance, production GPU.</text>
+
+  <rect x="424" y="88" width="192" height="132" rx="4" fill="#fff7ed" stroke="#E69F00" stroke-width="1.5"/>
+  <text x="520" y="112" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#92400e">Not a covered rung</text>
+  <text x="520" y="136" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#7c2d12">internal self-agreement</text>
+  <line x1="448" y1="142" x2="592" y2="142" stroke="#7c2d12" stroke-width="1.5"/>
+  <text x="520" y="164" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#7c2d12">R reference = engine at</text>
+  <text x="520" y="180" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#7c2d12">supplied variances</text>
+  <text x="520" y="202" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#7c2d12">proves reproducibility,</text>
+  <text x="520" y="218" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#7c2d12">not known truth.</text>
+
+  <text x="24" y="478" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#0f2533">Covered at validation scale can still be opt-in, dense, and REML-only. It is not 1.0, not production, and not interval-calibrated.</text>
+  <text x="24" y="500" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#64748b">Explicit genomic GREML is covered at validation scale; public_covered_count = 7. Live table is validation_status(); this figure does not flip a row.</text>
+  <text x="24" y="532" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#64748b">Read "Can I fit and report this?" before putting a number in a paper.</text>
+</svg>

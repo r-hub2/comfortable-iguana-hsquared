@@ -1,0 +1,3 @@
+case,component,value
+poisson_laplace,sigma_a2,3.6224042115833184
+binomial_vector_variational,sigma_a2,14.216738786397761

@@ -1,0 +1,13 @@
+key,value
+n,6
+genotyped,o1;o2;o3
+genotyped_rows,4;5;6
+g_shift,0.05
+tau,1
+omega,1
+blend_weight,0
+ridge,0
+G_eq_A22_maxabs_Hinv_minus_Ainv,0
+mrode_ch11_anchor,NO_ANCHOR
+aghmatrix_method,Martini
+not_a_covered_flip,true

@@ -1,0 +1,9 @@
+key,value
+sigma_g2,2
+sigma_e2,1
+k,2.8250000000000002
+n_records,4
+n_markers,6
+method,vanraden1_supplied_frequencies
+g_positive_definite,true
+gblup_snp_blup_max_abs_gebv_diff,1.1102230246251565e-15

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">G0 covariance and genetic correlation triangle</title>
+  <desc id="desc">Teaching panel of an illustrative two-trait genetic covariance matrix G0 beside its genetic-correlation triangle r_g. Mass and length show a positive correlation; values are illustrative. Experimental opt-in multivariate; rotation-invariant; loadings not shown; point display only.</desc>
+  <defs>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#94a3b8" stroke-width="1.2"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="300" fill="#ffffff"/>
+
+  <text x="24" y="26" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0072B2">Experimental / opt-in multivariate</text>
+  <text x="936" y="26" text-anchor="end" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#64748b">point display / no interval ribbons</text>
+
+  <!-- G0 panel -->
+  <text x="200" y="58" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#0f2533">G0 / genetic covariance</text>
+  <text x="200" y="78" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#64748b">trait scale / Va on diagonal</text>
+
+  <!-- column labels -->
+  <text x="148" y="108" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#475569">mass</text>
+  <text x="228" y="108" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#475569">length</text>
+  <text x="72" y="148" text-anchor="end" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#475569">mass</text>
+  <text x="72" y="208" text-anchor="end" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#475569">length</text>
+
+  <rect x="108" y="118" width="80" height="60" fill="#cfe8f5" stroke="#0f2533" stroke-width="1"/>
+  <text x="148" y="154" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="14" fill="#0f2533">1.21</text>
+  <rect x="188" y="118" width="80" height="60" fill="#fde8c8" stroke="#0f2533" stroke-width="1"/>
+  <text x="228" y="154" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="14" fill="#0f2533">0.42</text>
+  <rect x="108" y="178" width="80" height="60" fill="#fde8c8" stroke="#0f2533" stroke-width="1"/>
+  <text x="148" y="214" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="14" fill="#0f2533">0.42</text>
+  <rect x="188" y="178" width="80" height="60" fill="#cfe8f5" stroke="#0f2533" stroke-width="1"/>
+  <text x="228" y="214" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="14" fill="#0f2533">0.81</text>
+
+  <text x="200" y="262" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#64748b">illustrative numbers / not a published anchor</text>
+
+  <!-- arrow -->
+  <line x1="320" y1="178" x2="400" y2="178" stroke="#0072B2" stroke-width="2"/>
+  <polygon points="400,172 416,178 400,184" fill="#0072B2"/>
+  <text x="360" y="164" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#0072B2">standardize</text>
+
+  <!-- rg panel -->
+  <text x="620" y="58" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#0f2533">r_g / genetic correlation</text>
+  <text x="620" y="78" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#64748b">lower triangle / readable</text>
+
+  <text x="560" y="108" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#475569">mass</text>
+  <text x="640" y="108" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#475569">length</text>
+  <text x="484" y="148" text-anchor="end" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#475569">mass</text>
+  <text x="484" y="208" text-anchor="end" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#475569">length</text>
+
+  <rect x="520" y="118" width="80" height="60" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="560" y="154" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="14" fill="#94a3b8">1</text>
+  <rect x="600" y="118" width="80" height="60" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="640" y="154" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#cbd5e1">-</text>
+  <rect x="520" y="178" width="80" height="60" fill="#f4a582" stroke="#0f2533" stroke-width="1.25"/>
+  <text x="560" y="214" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="15" font-weight="700" fill="#0f2533">0.42</text>
+  <rect x="600" y="178" width="80" height="60" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="640" y="214" text-anchor="middle" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="14" fill="#94a3b8">1</text>
+
+  <text x="620" y="262" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#64748b">r_g = G_ij / sqrt(G_ii G_jj)</text>
+
+  <!-- side annotation -->
+  <rect x="740" y="100" width="196" height="140" rx="4" fill="#fffbeb" stroke="#E69F00" stroke-width="1.5"/>
+  <text x="838" y="128" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#92400e">Read this first</text>
+  <text x="838" y="152" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#0f2533">rotation-invariant</text>
+  <text x="838" y="172" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#0f2533">loadings not shown</text>
+  <text x="838" y="192" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#0f2533">R0 is residual, not G</text>
+  <text x="838" y="216" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#64748b">low-h2 cells flagged</text>
+  <text x="838" y="232" text-anchor="middle" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#64748b">in autoplot()</text>
+
+  <text x="24" y="288" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12" fill="#64748b">Prefer autoplot(fit, "g_matrix") on a real multivariate fit — same product figure as this teaching panel.</text>
+</svg>

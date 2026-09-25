@@ -1,0 +1,5 @@
+case,effect,value
+poisson_laplace,Intercept,1.3595035325591094
+poisson_laplace,x,-0.24086284275809119
+binomial_vector_variational,Intercept,-1.5993738797378794
+binomial_vector_variational,x,1.2001871312869645
