@@ -153,3 +153,28 @@ hs_sha256_file <- function(
 
   stop("no usable SHA-256 command is available (tried shasum, sha256sum, certutil)", call. = FALSE)
 }
+
+hs_sha256_canonical_csv <- function(path) {
+  bytes <- readBin(path, what = "raw", n = file.info(path)$size)
+  canonical <- raw()
+  i <- 1L
+
+  while (i <= length(bytes)) {
+    if (
+      identical(bytes[[i]], as.raw(13L)) &&
+        i < length(bytes) &&
+        identical(bytes[[i + 1L]], as.raw(10L))
+    ) {
+      canonical <- c(canonical, as.raw(10L))
+      i <- i + 2L
+    } else {
+      canonical <- c(canonical, bytes[[i]])
+      i <- i + 1L
+    }
+  }
+
+  normalized <- tempfile(fileext = ".csv")
+  on.exit(unlink(normalized), add = TRUE)
+  writeBin(canonical, normalized)
+  hs_sha256_file(normalized)
+}

@@ -63,7 +63,7 @@ test_that("comparator target manifest indexes mirrored R fixtures (#49 coordinat
   expect_match(nongaussian$boundary, "no per-record varying-trial R activation")
 })
 
-test_that("frozen comparator fixture SHA256 pins match mirrored CSV bytes", {
+test_that("frozen comparator fixture SHA256 pins match canonical CSV content", {
   pins <- utils::read.csv(
     hs_comparator_fixture_shas_path(),
     stringsAsFactors = FALSE
@@ -85,9 +85,19 @@ test_that("frozen comparator fixture SHA256 pins match mirrored CSV bytes", {
     for (i in seq_len(nrow(rows))) {
       path <- file.path(fixture_dir, rows$file[i])
       expect_true(file.exists(path))
-      expect_identical(hs_sha256_file(path), rows$sha256[i])
+      expect_identical(hs_sha256_canonical_csv(path), rows$sha256[i])
     }
   }
+})
+
+test_that("canonical CSV hashes ignore CRLF checkout conversion", {
+  lf <- tempfile(fileext = ".csv")
+  crlf <- tempfile(fileext = ".csv")
+  on.exit(unlink(c(lf, crlf)), add = TRUE)
+  writeBin(charToRaw("a,b\n1,2\n"), lf)
+  writeBin(charToRaw("a,b\r\n1,2\r\n"), crlf)
+
+  expect_identical(hs_sha256_canonical_csv(lf), hs_sha256_canonical_csv(crlf))
 })
 
 test_that("SHA-256 output parser accepts the Windows certutil form", {
