@@ -119,7 +119,8 @@ hs_sha256_file <- function(
   path,
   find_command = Sys.which,
   run_command = system2,
-  windows_directory = Sys.getenv("WINDIR")
+  windows_directory = Sys.getenv("WINDIR"),
+  system_root = Sys.getenv("SystemRoot")
 ) {
   commands <- list(
     list(command = "shasum", args = c("-a", "256", path)),
@@ -127,9 +128,12 @@ hs_sha256_file <- function(
     list(command = "certutil", args = c("-hashfile", path, "SHA256"))
   )
 
-  if (nzchar(windows_directory)) {
+  windows_directories <- unique(c(windows_directory, system_root))
+  windows_directories <- windows_directories[nzchar(windows_directories)]
+
+  for (directory in windows_directories) {
     commands[[length(commands) + 1L]] <- list(
-      command = file.path(windows_directory, "System32", "certutil.exe"),
+      command = file.path(directory, "System32", "certutil.exe"),
       args = c("-hashfile", path, "SHA256"),
       system_path = TRUE
     )
