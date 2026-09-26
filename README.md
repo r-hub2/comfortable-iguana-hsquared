@@ -17,9 +17,9 @@ components, and breeding values on the routes that are
 availability is tracked separately.</p>
 
 <p class="hs-cta">
-<a class="hs-btn hs-btn-primary" href="articles/hsquared.html">Get started</a>
-<a class="hs-btn" href="articles/current-limits.html">Choose a model</a>
-<a class="hs-btn" href="articles/fitting-models.html">Fit a model</a>
+<a class="hs-btn hs-btn-primary" href="https://itchyshin.github.io/hsquared/articles/hsquared.html">Get started</a>
+<a class="hs-btn" href="https://itchyshin.github.io/hsquared/articles/current-limits.html">Choose a model</a>
+<a class="hs-btn" href="https://itchyshin.github.io/hsquared/articles/fitting-models.html">Fit a model</a>
 </p>
 
 <!-- Plain blockquote, never GitHub alert-callout syntax. pkgdown renders
@@ -33,28 +33,28 @@ availability is tracked separately.</p>
 > and an `HSquared.jl` checkout. Julia engine-covered ≠ R-public covered. Report
 > point estimates only within a covered route. No interval is nominally
 > coverage-calibrated; named univariate pedigree intervals are only classified
-> as directional-conservative. See [Can I fit and report this?](articles/current-limits.html).
+> as directional-conservative. See [Can I fit and report this?](https://itchyshin.github.io/hsquared/articles/current-limits.html).
 
 ## Your first analysis
 
 <ol class="hs-workflow" aria-label="Five stages of an hsquared analysis">
-<li><strong>1. Get started</strong><br><a href="articles/hsquared.html">Install or validate a first animal-model formula</a>.</li>
-<li><strong>2. Choose a model</strong><br><a href="articles/current-limits.html">Check the route scope before fitting</a>.</li>
-<li><strong>3. Fit</strong><br><a href="articles/fitting-models.html">Run the smallest honest workflow</a>.</li>
-<li><strong>4. Diagnose</strong><br><a href="articles/visualizing-models.html">Read fit diagnostics before extracting results</a>.</li>
-<li><strong>5. Report</strong><br><a href="articles/current-limits.html">Use route-scoped point estimates only</a>.</li>
+<li><strong>1. Get started</strong><br><a href="https://itchyshin.github.io/hsquared/articles/hsquared.html">Install or validate a first animal-model formula</a>.</li>
+<li><strong>2. Choose a model</strong><br><a href="https://itchyshin.github.io/hsquared/articles/current-limits.html">Check the route scope before fitting</a>.</li>
+<li><strong>3. Fit</strong><br><a href="https://itchyshin.github.io/hsquared/articles/fitting-models.html">Run the smallest honest workflow</a>.</li>
+<li><strong>4. Diagnose</strong><br><a href="https://itchyshin.github.io/hsquared/articles/visualizing-models.html">Read fit diagnostics before extracting results</a>.</li>
+<li><strong>5. Report</strong><br><a href="https://itchyshin.github.io/hsquared/articles/current-limits.html">Use route-scoped point estimates only</a>.</li>
 </ol>
 
 ## Start here
 
 | If you want to… | Read this |
 | --- | --- |
-| check a formula without installing Julia | [Getting started](articles/hsquared.html) (`engine = "validate"`) |
-| decide whether a number may go in a paper | [Can I fit and report this?](articles/current-limits.html) |
-| see the seven R-public covered routes | [Model status](articles/model-status.html) |
+| check a formula without installing Julia | [Getting started](https://itchyshin.github.io/hsquared/articles/hsquared.html) (`engine = "validate"`) |
+| decide whether a number may go in a paper | [Can I fit and report this?](https://itchyshin.github.io/hsquared/articles/current-limits.html) |
+| see the seven R-public covered routes | [Model status](https://itchyshin.github.io/hsquared/articles/model-status.html) |
 | set up the Julia engine | [Installation](#installation) |
-| look up a function | [Reference](reference/index.html) |
-| understand evidence history without mistaking it for a release | [Progression & evidence](articles/progression-evidence.html) |
+| look up a function | [Reference](https://itchyshin.github.io/hsquared/reference/index.html) |
+| understand evidence history without mistaking it for a release | [Progression & evidence](https://itchyshin.github.io/hsquared/articles/progression-evidence.html) |
 
 ## Quick start — no Julia required
 
@@ -94,7 +94,7 @@ fit <- hsquared(
 summary(fit)
 ```
 
-Report only what [Can I fit and report this?](articles/current-limits.html)
+Report only what [Can I fit and report this?](https://itchyshin.github.io/hsquared/articles/current-limits.html)
 allows for the route you ran.
 
 ## Installation

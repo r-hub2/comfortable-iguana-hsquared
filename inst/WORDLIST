@@ -79,6 +79,7 @@ haplodiploid
 haplodiploidy
 heritabilities
 heritability
+hs
 jj
 jl
 lme
@@ -97,6 +98,7 @@ pe
 ped
 pkgdown
 ploidy
+poisson
 polyploid
 polyploidy
 qquad

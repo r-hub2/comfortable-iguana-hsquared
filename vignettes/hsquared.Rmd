@@ -123,10 +123,10 @@ this first example.
 `common_env()`, and `maternal_genetic()` are parsed; they fit only with a named
 `target =`. The default `hsquared()` call names that target and stops. See
 [Fitting models](https://itchyshin.github.io/hsquared/articles/fitting-models.html).
-Continue in the same order: [Choose a model](current-limits.html),
-[Fit](fitting-models.html), [Diagnose](visualizing-models.html), then
-[Report](current-limits.html). Read
-[Progression & evidence](progression-evidence.html) when you need the
+Continue in the same order: [Choose a model](https://itchyshin.github.io/hsquared/articles/current-limits.html),
+[Fit](https://itchyshin.github.io/hsquared/articles/fitting-models.html), [Diagnose](https://itchyshin.github.io/hsquared/articles/visualizing-models.html), then
+[Report](https://itchyshin.github.io/hsquared/articles/current-limits.html). Read
+[Progression & evidence](https://itchyshin.github.io/hsquared/articles/progression-evidence.html) when you need the
 history behind a route label rather than a current reporting decision.
 
 ## Twin-package flow
