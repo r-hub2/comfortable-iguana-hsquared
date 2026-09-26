@@ -119,9 +119,19 @@ hs_sha256_file <- function(
   path,
   find_command = Sys.which,
   run_command = system2,
+  tools_sha256 = get0("sha256sum", envir = asNamespace("tools"), inherits = FALSE),
   windows_directory = Sys.getenv("WINDIR"),
   system_root = Sys.getenv("SystemRoot")
 ) {
+  if (!is.null(tools_sha256)) {
+    digest <- tryCatch(
+      unname(tools_sha256(path)),
+      error = function(...) NULL
+    )
+    digest <- tolower(as.character(digest))
+    if (length(digest) == 1L && grepl("^[0-9a-f]{64}$", digest)) return(digest)
+  }
+
   commands <- list(
     list(command = "shasum", args = c("-a", "256", path)),
     list(command = "sha256sum", args = path),

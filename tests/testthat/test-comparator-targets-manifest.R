@@ -111,6 +111,20 @@ test_that("SHA-256 output parser accepts the Windows certutil form", {
   expect_identical(hs_extract_sha256(certutil_output), expected)
 })
 
+test_that("fixture SHA-256 helper uses R-devel's native SHA-256 backend", {
+  expected <- "8bc191bf660c0c26d0e51f0f243502fe601c648f3c97a2047fa2c2b62bc3884f"
+  native_sha256 <- function(path) setNames(expected, path)
+
+  expect_identical(
+    hs_sha256_file(
+      "sealed.csv",
+      find_command = function(...) stop("external commands must not run"),
+      tools_sha256 = native_sha256
+    ),
+    expected
+  )
+})
+
 test_that("fixture SHA-256 helper falls through a failed backend", {
   expected <- "8bc191bf660c0c26d0e51f0f243502fe601c648f3c97a2047fa2c2b62bc3884f"
   find_command <- function(command) {
@@ -124,7 +138,12 @@ test_that("fixture SHA-256 helper falls through a failed backend", {
   }
 
   expect_identical(
-    hs_sha256_file("sealed.csv", find_command = find_command, run_command = run_command),
+    hs_sha256_file(
+      "sealed.csv",
+      find_command = find_command,
+      run_command = run_command,
+      tools_sha256 = NULL
+    ),
     expected
   )
 })
@@ -146,6 +165,7 @@ test_that("fixture SHA-256 helper uses the Windows system certutil path", {
       "sealed.csv",
       find_command = function(...) "",
       run_command = run_command,
+      tools_sha256 = NULL,
       windows_directory = "C:/Windows"
     ),
     expected
@@ -170,6 +190,7 @@ test_that("fixture SHA-256 helper uses SystemRoot when WINDIR is unavailable", {
       "sealed.csv",
       find_command = function(...) "",
       run_command = run_command,
+      tools_sha256 = NULL,
       windows_directory = "",
       system_root = "C:/Windows"
     ),
