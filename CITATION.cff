@@ -3,7 +3,7 @@ message: "If you use hsquared (or the Julia twin HSquared.jl), please cite it as
 title: "hsquared: R interface for Julia-backed quantitative-genetic models"
 abstract: >-
   R-facing twin of HSquared.jl for open, sparse, inheritance-aware quantitative
-  genetics (animal models, relationship matrices, REML/ML, breeding values, and
+  genetics (animal models, relationship matrices, REML, breeding values, and
   planned genomic / non-standard inheritance surfaces). Twin DOI pending (hub
   D-23); cite both repositories together once the shared DOI is deposited.
 type: software

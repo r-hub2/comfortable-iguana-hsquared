@@ -15,10 +15,8 @@ knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 > and public availability are separate states. Version tracks *covered*
 > capability, not surface area. `public_covered_count` is **7** (multivariate
 > + explicit 0.7 genomic GREML). Fitting needs a local Julia and an
-> `HSquared.jl` checkout; the Julia General registration
-> ([PR #166969](https://github.com/JuliaRegistries/General/pull/166969))
-> is deferred pending collaborator review — do not use install-by-name
-> (`Pkg.add("HSquared")`). Read
+> `HSquared.jl` checkout; it is not registered in Julia General. Do not use
+> install-by-name (`Pkg.add("HSquared")`). Read
 > [Can I fit and report this?](https://itchyshin.github.io/hsquared/articles/current-limits.html)
 > before putting a number in a paper.
 
